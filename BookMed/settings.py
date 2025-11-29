@@ -18,7 +18,7 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-#SECRET_KEY = os.environ.get("SECRET_KEY", "chave-insegura-dev")
+SECRET_KEY = os.environ.get("SECRET_KEY", "chave-insegura-dev")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = ["bookmed.onrender.com"]
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'BookMed.urls'
+
 
 TEMPLATES = [
     {
@@ -122,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+#STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
