@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Login</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Entrar</button>
+</form>
+
+<!-- Botão extra para voltar ao site -->
+<a href="{% url 'home' %}" class="btn btn-secondary">Voltar ao site</a>
+{% endblock %}
